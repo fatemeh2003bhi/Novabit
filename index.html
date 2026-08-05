@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Novabit؛ راهنمای فارسی مهندسی کامپیوتر، دروس دانشگاهی، حوزه‌های تخصصی، مسیر یادگیری، مهارت‌های ضروری، مقالات و رزرو مشاوره.">
+  <meta name="theme-color" content="#040b19">
+  <title>Novabit | راهنمای مهندسی کامپیوتر</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%231edff1'/%3E%3Cstop offset='1' stop-color='%23815cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='none' stroke='url(%23g)' stroke-width='5' stroke-linejoin='round' d='M32 4 54 17v30L32 60 10 47V17Z'/%3E%3Ccircle cx='23' cy='32' r='6' fill='none' stroke='%231edff1' stroke-width='4'/%3E%3Cpath d='M41 24v16M36 29l5-5' fill='none' stroke='%23815cff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try { savedTheme = localStorage.getItem('novabit-theme'); } catch (_) {}
+      const hour = new Date().getHours();
+      const automaticTheme = hour >= 6 && hour < 18 ? 'light' : 'dark';
+      const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : automaticTheme;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+      window.__NOVABIT_THEME__ = theme;
+      window.__NOVABIT_THEME_AUTO__ = !savedTheme;
+      document.write(`<link id="theme-stylesheet" rel="stylesheet" href="styles-${theme}.css">`);
+    })();
+  </script>
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.5 14.2A8.3 8.3 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M8.5 16.5 15.5 7.5"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/><rect x="10" y="10" width="4" height="4"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-2h12v2"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9.5 4.5A3.5 3.5 0 0 0 6 8v.5A3.5 3.5 0 0 0 5 15a3 3 0 0 0 4.5 2.6V5.2M14.5 4.5A3.5 3.5 0 0 1 18 8v.5a3.5 3.5 0 0 1 1 6.5 3 3 0 0 1-4.5 2.6V5.2M9.5 10H7M14.5 10H17M9.5 15H8M14.5 15H16"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.4 3 14.6 0 18M12 3c-3 3.4-3 14.6 0 18"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 5h4M11 19h2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 20 6v6c0 5-3.4 8-8 10-4.6-2-8-5-8-10V6l8-3Z"/><path d="m9.5 12 1.7 1.7 3.6-4"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18h11a4 4 0 0 0 .7-7.9A6.5 6.5 0 0 0 6.4 8.8 4.5 4.5 0 0 0 7 18Z"/><path d="M12 12v6M9.5 14.5 12 12l2.5 2.5"/></symbol>
+    <symbol id="i-game" viewBox="0 0 24 24"><path d="M7 8h10a5 5 0 0 1 4.7 6.7l-1.3 3.6a2 2 0 0 1-3.2.8L15 17H9l-2.2 2.1a2 2 0 0 1-3.2-.8l-1.3-3.6A5 5 0 0 1 7 8Z"/><path d="M7 12v4M5 14h4M16 13h.01M19 15h.01"/></symbol>
+    <symbol id="i-infinity" viewBox="0 0 24 24"><path d="M7.5 8C4.5 8 3 10 3 12s1.5 4 4.5 4C11 16 13 8 16.5 8 19.5 8 21 10 21 12s-1.5 4-4.5 4C13 16 11 8 7.5 8Z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="m4 16-1 5 5-1L20 8l-4-4L4 16Z"/><path d="m14 6 4 4"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h.01M7 17h.01M11 7h6M11 17h6"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5A3.5 3.5 0 0 1 7.5 1H11v18H7.5A3.5 3.5 0 0 0 4 22V4.5ZM20 4.5A3.5 3.5 0 0 0 16.5 1H13v18h3.5A3.5 3.5 0 0 1 20 22V4.5Z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><path d="M6 7v10M8 10c6 0 8-1 8-3M16 7l2-2-2-2"/></symbol>
+    <symbol id="i-language" viewBox="0 0 24 24"><path d="M4 5h10M9 3v2M6 8c1 4 4 7 8 9M12 8c-1 3-3 6-7 9M15 20l4-10 4 10M16.5 16h5"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h.01M12 14h.01M16 14h.01"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-call" viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2a15 15 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></symbol>
+    <symbol id="i-location" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-bit-logo" viewBox="0 0 64 64">
+      <path d="M32 4 54 17v30L32 60 10 47V17L32 4Z"/>
+      <circle cx="23" cy="32" r="6"/>
+      <path d="M41 24v16M36 29l5-5"/>
+    </symbol>
+  </svg>
+
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <button class="theme-toggle" type="button" aria-label="تغییر به حالت روز" title="تغییر به حالت روز">
+    <svg class="sun-icon" aria-hidden="true"><use href="#i-sun"></use></svg>
+    <svg class="moon-icon" aria-hidden="true"><use href="#i-moon"></use></svg>
+    <span class="theme-label">حالت روز</span>
+  </button>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="صفحه اصلی Novabit">
+        <span class="brand-symbol" aria-hidden="true"><svg><use href="#i-bit-logo"></use></svg></span>
+        <span class="brand-name">Novabit</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="منوی اصلی">
+        <a class="active" href="#top">خانه</a>
+        <a href="#courses">دروس دانشگاهی</a>
+        <a href="#fields">مسیرهای تخصصی</a>
+        <a href="#roadmap">نقشه یادگیری</a>
+        <a href="#skills">مهارت‌های کلیدی</a>
+        <a href="#articles">مجله Novabit</a>
+        <a href="#contact">تماس با ما</a>
+      </nav>
+
+      <a class="header-cta" href="#consultation"><svg><use href="#i-calendar"></use></svg> نوبت مشاوره</a>
+
+      <button class="menu-toggle" type="button" aria-label="باز کردن منو" aria-expanded="false">
+        <svg><use href="#i-menu"></use></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" aria-label="منوی موبایل">
+      <a href="#top">خانه</a>
+      <a href="#courses">دروس دانشگاهی</a>
+      <a href="#fields">مسیرهای تخصصی</a>
+      <a href="#roadmap">نقشه یادگیری</a>
+      <a href="#skills">مهارت‌های کلیدی</a>
+      <a href="#articles">مجله Novabit</a>
+      <a href="#contact">تماس با ما</a>
+      <a class="mobile-consult-link" href="#consultation">نوبت مشاوره</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow"><span></span> راهنمای جامع رشته، مهارت و بازار کار</span>
+          <h1 id="hero-title">مهندسی کامپیوتر</h1>
+          <p>مهندسی کامپیوتر پلی میان خلاقیت، منطق و فناوری است؛ رشته‌ای که به شما می‌آموزد نرم‌افزارها، وب‌سایت‌ها، اپلیکیشن‌ها، شبکه‌ها و سیستم‌های هوشمند چگونه طراحی و ساخته می‌شوند. در این مسیر با برنامه‌نویسی، الگوریتم، ساختمان داده، امنیت، هوش مصنوعی و معماری کامپیوتر آشنا می‌شوید تا بتوانید برای مسائل واقعی، راه‌حل‌های دیجیتال دقیق، کاربردی و حرفه‌ای بسازید.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#courses">مشاهده دروس مهم <svg><use href="#i-arrow"></use></svg></a>
+            <a class="btn ghost" href="#fields">مشاهده حوزه‌ها</a>
+          </div>
+          <div class="hero-points" aria-label="ویژگی‌های رشته">
+            <span><svg><use href="#i-check"></use></svg> حل مسئله و تفکر منطقی</span>
+            <span><svg><use href="#i-check"></use></svg> تنوع مسیرهای تخصصی</span>
+            <span><svg><use href="#i-check"></use></svg> امکان ساخت محصولات واقعی</span>
+          </div>
+        </div>
+
+        <div class="hero-media reveal" aria-label="تصویر مفهومی مهندسی کامپیوتر">
+          <div class="hero-image-wrap">
+            <img src="hero-novabit.jpg" alt="لپ‌تاپ برنامه‌نویسی در کنار نمادهای هوش مصنوعی، امنیت، شبکه و موبایل">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section courses" id="courses">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>پایه علمی رشته</span>
+          <h2>دروس مهم دانشگاهی</h2>
+          <p>این درس‌ها ستون‌های اصلی فهم نرم‌افزار، سخت‌افزار، داده و سیستم‌های کامپیوتری هستند.</p>
+        </div>
+        <div class="course-grid">
+          <article class="course-card reveal"><div class="card-icon purple"><svg><use href="#i-code"></use></svg></div><h3>مبانی برنامه‌نویسی</h3><p>آشنایی با متغیر، شرط، حلقه، تابع، آرایه و روش تبدیل مسئله به برنامه با زبان‌هایی مانند C، C++ یا Python.</p></article>
+          <article class="course-card reveal"><div class="card-icon cyan"><svg><use href="#i-layers"></use></svg></div><h3>ساختمان داده</h3><p>سازمان‌دهی داده‌ها با آرایه، لیست، پشته، صف، درخت، گراف و جدول هش برای ساخت برنامه‌های سریع‌تر.</p></article>
+          <article class="course-card reveal"><div class="card-icon blue"><svg><use href="#i-route"></use></svg></div><h3>طراحی الگوریتم</h3><p>طراحی راه‌حل‌های بهینه، تحلیل پیچیدگی زمانی و آشنایی با بازگشت، الگوریتم‌های حریصانه و برنامه‌نویسی پویا.</p></article>
+          <article class="course-card reveal"><div class="card-icon aqua"><svg><use href="#i-database"></use></svg></div><h3>پایگاه داده</h3><p>مدل‌سازی اطلاعات، طراحی جدول‌ها، روابط داده‌ای، زبان SQL و مدیریت داده در سامانه‌های واقعی.</p></article>
+          <article class="course-card reveal"><div class="card-icon orange"><svg><use href="#i-cpu"></use></svg></div><h3>سیستم‌عامل</h3><p>شناخت پردازش‌ها، نخ‌ها، مدیریت حافظه، فایل‌ها، هم‌زمانی و نحوه مدیریت منابع توسط سیستم‌عامل.</p></article>
+          <article class="course-card reveal"><div class="card-icon pink"><svg><use href="#i-network"></use></svg></div><h3>شبکه‌های کامپیوتری</h3><p>مدل OSI، پروتکل‌های TCP/IP، مسیریابی، آدرس‌دهی، اینترنت، سرویس‌ها و اصول امنیت شبکه.</p></article>
+          <article class="course-card reveal"><div class="card-icon green"><svg><use href="#i-brain"></use></svg></div><h3>هوش مصنوعی</h3><p>روش‌های جست‌وجو، تصمیم‌گیری، یادگیری ماشین، مدل‌سازی هوشمند و حل مسئله با استفاده از داده.</p></article>
+          <article class="course-card reveal"><div class="card-icon yellow"><svg><use href="#i-cpu"></use></svg></div><h3>معماری و مدار منطقی</h3><p>ساختار پردازنده، حافظه، ورودی‌وخروجی، گیت‌های منطقی و چگونگی اجرای دستورها در سخت‌افزار.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fields" id="fields">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>مسیرهای تخصصی</span>
+          <h2>حوزه‌های مهندسی کامپیوتر و مهارت‌های هر مسیر</h2>
+          <p>هر حوزه ابزارها و دانش مخصوص خود را دارد. لازم نیست همه را تخصصی یاد بگیرید؛ ابتدا پایه‌ها را بسازید و سپس یک مسیر را عمیق دنبال کنید.</p>
+        </div>
+        <div class="field-grid">
+          <article class="field-card reveal" style="--accent:#8b5cff"><header><span><svg><use href="#i-globe"></use></svg></span><div><h3>توسعه وب</h3><p>ساخت سایت‌ها و سامانه‌های آنلاین</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>HTML، CSS و طراحی Responsive</li><li>JavaScript و TypeScript</li><li>React یا Vue برای فرانت‌اند</li><li>Node.js، Django، Laravel یا ASP.NET</li><li>REST API، احراز هویت و امنیت وب</li><li>SQL، Git، Linux و استقرار پروژه</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#ef75d1"><header><span><svg><use href="#i-phone"></use></svg></span><div><h3>برنامه‌نویسی موبایل</h3><p>اپلیکیشن‌های Android و iOS</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Kotlin و Android Studio</li><li>Swift، SwiftUI و Xcode</li><li>Flutter و Dart یا React Native</li><li>طراحی رابط کاربری موبایل</li><li>REST API، Firebase و ذخیره‌سازی</li><li>تست، بهینه‌سازی و انتشار اپلیکیشن</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#47e6bd"><header><span><svg><use href="#i-brain"></use></svg></span><div><h3>هوش مصنوعی و یادگیری ماشین</h3><p>ساخت سیستم‌های داده‌محور و هوشمند</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Python و برنامه‌نویسی علمی</li><li>جبر خطی، آمار و احتمال</li><li>NumPy، Pandas و Matplotlib</li><li>Scikit-learn، TensorFlow و PyTorch</li><li>پردازش داده و مهندسی ویژگی</li><li>آموزش، ارزیابی و استقرار مدل</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#ffb340"><header><span><svg><use href="#i-chart"></use></svg></span><div><h3>علم داده و تحلیل داده</h3><p>استخراج بینش از اطلاعات</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Excel، SQL و Python</li><li>Pandas، NumPy و آمار کاربردی</li><li>پاک‌سازی و آماده‌سازی داده</li><li>Power BI یا Tableau</li><li>مصورسازی و طراحی داشبورد</li><li>تحلیل کسب‌وکار و گزارش‌نویسی</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#ff6379"><header><span><svg><use href="#i-shield"></use></svg></span><div><h3>امنیت سایبری</h3><p>محافظت از اطلاعات، شبکه و سامانه‌ها</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Linux، Windows و مفاهیم شبکه</li><li>Python و Bash Scripting</li><li>امنیت وب و تست نفوذ قانونی</li><li>رمزنگاری و کنترل دسترسی</li><li>Wireshark، Nmap و Burp Suite</li><li>تحلیل رخداد، آسیب‌پذیری و بدافزار</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#2bd8f0"><header><span><svg><use href="#i-network"></use></svg></span><div><h3>شبکه و زیرساخت</h3><p>اتصال، مدیریت و نگهداری سیستم‌ها</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>TCP/IP، OSI و Subnetting</li><li>Routing، Switching و تجهیزات Cisco</li><li>Windows Server و Active Directory</li><li>Linux Server و سرویس‌های شبکه</li><li>Virtualization، Firewall و Backup</li><li>Monitoring و مبانی Cloud</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#4e9cff"><header><span><svg><use href="#i-code"></use></svg></span><div><h3>مهندسی نرم‌افزار</h3><p>ساخت اصولی نرم‌افزارهای قابل توسعه</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>الگوریتم، ساختمان داده و OOP</li><li>تحلیل نیازمندی و مدل‌سازی UML</li><li>Design Patterns و معماری نرم‌افزار</li><li>Git، تست و Code Review</li><li>Agile، Scrum و مدیریت پروژه</li><li>Clean Code و مستندسازی فنی</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#79df58"><header><span><svg><use href="#i-cpu"></use></svg></span><div><h3>سخت‌افزار و سیستم‌های نهفته</h3><p>تلفیق برنامه‌نویسی و الکترونیک</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>C و C++</li><li>الکترونیک و مدارهای منطقی</li><li>Microcontroller و معماری ARM</li><li>Arduino، ESP32 و Raspberry Pi</li><li>Sensors و پروتکل‌های ارتباطی</li><li>Embedded Linux و طراحی PCB</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#b75cff"><header><span><svg><use href="#i-game"></use></svg></span><div><h3>بازی‌سازی</h3><p>طراحی و توسعه بازی‌های دیجیتال</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Unity و C# یا Unreal و C++</li><li>ریاضی بردارها و فیزیک بازی</li><li>Game Logic و هوش مصنوعی بازی</li><li>طراحی مراحل و گیم‌پلی</li><li>مدل‌سازی، انیمیشن و Blender</li><li>بهینه‌سازی و انتشار بازی</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#35c7ff"><header><span><svg><use href="#i-infinity"></use></svg></span><div><h3>رایانش ابری و DevOps</h3><p>استقرار و پایداری نرم‌افزارها</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Linux، Network و Git</li><li>Docker و Containerization</li><li>Kubernetes و Orchestration</li><li>CI/CD و GitHub Actions</li><li>AWS، Azure یا Google Cloud</li><li>Terraform، Monitoring و SRE</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#ef67bd"><header><span><svg><use href="#i-pen"></use></svg></span><div><h3>طراحی رابط و تجربه کاربری</h3><p>طراحی محصول ساده، زیبا و قابل استفاده</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Figma و طراحی رابط کاربری</li><li>UI Principles و Design System</li><li>UX Research و شناخت کاربر</li><li>Wireframe و Prototype</li><li>تایپوگرافی، رنگ و چیدمان</li><li>Usability Testing و طراحی Responsive</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#7d5cff"><header><span><svg><use href="#i-database"></use></svg></span><div><h3>مهندسی داده</h3><p>ساخت زیرساخت جمع‌آوری و پردازش داده</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Python، SQL و Linux</li><li>ETL و Data Pipeline</li><li>Data Warehouse و Data Modeling</li><li>Apache Spark و Airflow</li><li>Kafka و پردازش جریان داده</li><li>Cloud Data Services و پایش کیفیت</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#32dbb5"><header><span><svg><use href="#i-cloud"></use></svg></span><div><h3>اینترنت اشیا و رباتیک</h3><p>اتصال دستگاه‌ها و ساخت سیستم‌های هوشمند</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>C/C++، Python و برنامه‌نویسی بردها</li><li>Arduino، ESP32 و Raspberry Pi</li><li>Sensors، Actuators و کنترل</li><li>MQTT، HTTP و ارتباط بی‌سیم</li><li>پردازش سیگنال و داده‌های حسگر</li><li>طراحی سیستم، امنیت IoT و Cloud</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#9f77ff"><header><span><svg><use href="#i-eye"></use></svg></span><div><h3>بینایی ماشین و پردازش تصویر</h3><p>درک و تحلیل تصویر و ویدئو</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Python، NumPy و ریاضیات</li><li>OpenCV و Image Processing</li><li>CNN و Deep Learning</li><li>PyTorch یا TensorFlow</li><li>تشخیص، دسته‌بندی و قطعه‌بندی تصویر</li><li>آماده‌سازی داده و ارزیابی مدل</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#3a9fff"><header><span><svg><use href="#i-server"></use></svg></span><div><h3>سیستم‌های توزیع‌شده و بک‌اند مقیاس‌پذیر</h3><p>ساخت سرویس‌های پرترافیک و پایدار</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>Java، Go، C# یا Python</li><li>Microservices و REST/gRPC</li><li>Concurrency و Distributed Systems</li><li>Redis، Message Queue و Caching</li><li>Docker، Kubernetes و Observability</li><li>Load Balancing و طراحی مقاوم به خطا</li></ul></div></article>
+          <article class="field-card reveal" style="--accent:#ff9d48"><header><span><svg><use href="#i-database"></use></svg></span><div><h3>پایگاه داده و مدیریت اطلاعات</h3><p>طراحی و نگهداری سامانه‌های داده‌ای</p></div></header><div class="field-body"><b>مهارت‌های موردنیاز</b><ul><li>SQL و طراحی رابطه‌ای</li><li>PostgreSQL، MySQL و SQL Server</li><li>NoSQL مانند MongoDB و Redis</li><li>Normalization، Index و Query Tuning</li><li>Backup، Replication و امنیت داده</li><li>مدل‌سازی، Migration و پایش عملکرد</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roadmap" id="roadmap">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>نقشه راه مبتدی</span>
+          <h2>از کجا شروع کنم؟</h2>
+          <p>با پایه‌های مشترک آغاز کنید، پروژه بسازید و بعد از شناخت علاقه و توانایی خود وارد یک مسیر تخصصی شوید.</p>
+        </div>
+        <div class="roadmap-track reveal">
+          <article><span>01</span><svg><use href="#i-book"></use></svg><h3>شناخت مفاهیم پایه</h3><p>آشنایی با کامپیوتر، اینترنت، سیستم‌عامل و منطق برنامه‌نویسی.</p></article>
+          <article><span>02</span><svg><use href="#i-brain"></use></svg><h3>منطق و حل مسئله</h3><p>تمرین الگوریتم، فلوچارت و شکستن مسائل بزرگ به بخش‌های کوچک.</p></article>
+          <article><span>03</span><svg><use href="#i-code"></use></svg><h3>شروع برنامه‌نویسی</h3><p>یادگیری یک زبان پایه مانند Python یا C++ و تمرین روزانه.</p></article>
+          <article><span>04</span><svg><use href="#i-layers"></use></svg><h3>ساختمان داده و Git</h3><p>یادگیری ساختارهای داده، الگوریتم‌ها و مدیریت نسخه با Git.</p></article>
+          <article><span>05</span><svg><use href="#i-target"></use></svg><h3>ساخت پروژه واقعی</h3><p>تبدیل آموخته‌ها به پروژه کوچک، قابل نمایش و قابل استفاده.</p></article>
+          <article><span>06</span><svg><use href="#i-route"></use></svg><h3>انتخاب حوزه تخصصی</h3><p>مقایسه مسیرها، شناخت بازار کار و انتخاب یک حوزه برای یادگیری عمیق.</p></article>
+          <article><span>07</span><svg><use href="#i-briefcase"></use></svg><h3>نمونه‌کار و ورود به بازار</h3><p>ساخت رزومه، GitHub، شبکه‌سازی و آماده‌شدن برای کارآموزی و استخدام.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>توانایی‌های ماندگار</span>
+          <h2>مهارت‌های ضروری برای تبدیل‌شدن به یک مهندس کامپیوتر</h2>
+          <p>این مهارت‌ها محدود به یک زبان یا ابزار نیستند و در تمام مسیرهای حرفه‌ای به شما کمک می‌کنند.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><svg><use href="#i-brain"></use></svg><h3>تفکر منطقی و حل مسئله</h3><p>تحلیل مسئله، تشخیص نیاز واقعی، طراحی راه‌حل مرحله‌به‌مرحله و ارزیابی نتیجه.</p></article>
+          <article class="skill-card reveal"><svg><use href="#i-code"></use></svg><h3>برنامه‌نویسی و الگوریتم</h3><p>تسلط بر مفاهیم پایه، ساختمان داده، پیچیدگی زمانی و نوشتن کد خوانا و قابل نگهداری.</p></article>
+          <article class="skill-card reveal"><svg><use href="#i-layers"></use></svg><h3>ساختمان داده</h3><p>انتخاب ساختار درست برای ذخیره، جست‌وجو و پردازش اطلاعات با کارایی مناسب.</p></article>
+          <article class="skill-card reveal"><svg><use href="#i-database"></use></svg><h3>پایگاه داده</h3><p>مدل‌سازی اطلاعات، SQL، طراحی روابط و درک روش‌های ذخیره‌سازی داده.</p></article>
+          <article class="skill-card reveal"><svg><use href="#i-git"></use></svg><h3>Git و کار تیمی</h3><p>مدیریت نسخه، کار با شاخه‌ها، Code Review، ارتباط حرفه‌ای و مشارکت در پروژه گروهی.</p></article>
+          <article class="skill-card reveal"><svg><use href="#i-globe"></use></svg><h3>آشنایی با Linux و اینترنت</h3><p>کار با خط فرمان، فایل‌ها، پردازش‌ها، شبکه، پروتکل‌های وب و مفاهیم استقرار.</p></article>
+          <article class="skill-card reveal"><svg><use href="#i-language"></use></svg><h3>انگلیسی تخصصی</h3><p>خواندن مستندات، جست‌وجوی دقیق، فهم خطاها و دنبال‌کردن منابع معتبر جهانی.</p></article>
+          <article class="skill-card reveal"><svg><use href="#i-search"></use></svg><h3>تحلیل و دیباگ</h3><p>ردیابی خطا، آزمایش فرضیه‌ها، استفاده از ابزارهای Debug و یافتن علت اصلی مشکل.</p></article>
+          <article class="skill-card reveal"><svg><use href="#i-doc"></use></svg><h3>مستندسازی</h3><p>نوشتن توضیحات روشن برای کد، معماری، API، تصمیم‌های فنی و روش اجرای پروژه.</p></article>
+          <article class="skill-card reveal"><svg><use href="#i-infinity"></use></svg><h3>یادگیری مستمر</h3><p>به‌روزرسانی دانش، تمرین منظم، ساخت پروژه و سازگاری با فناوری‌های جدید.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section content-section" id="articles">
+      <div class="container content-grid">
+        <div class="articles-panel reveal">
+          <div class="panel-heading unified-panel-heading">
+            <div class="panel-title">
+              <span class="panel-icon" aria-hidden="true"><svg><use href="#i-doc"></use></svg></span>
+              <div><span>دانش عمیق، بیان ساده</span><h2>مقالات علمی منتخب</h2></div>
+            </div>
+            <span class="evidence-badge">NIST · ACM · IEEE-CS · OWASP</span>
+          </div>
+          <p class="panel-description">چهار مقاله خواندنی و مستند برای فهم عمیق‌تر نرم‌افزار، هوش مصنوعی، امنیت و معماری کامپیوتر؛ هر مطلب با تکیه بر استانداردها و گزارش‌های علمی معتبر نوشته شده است.</p>
+          <div class="article-grid">
+            <article class="article-card" data-article="software">
+              <img src="article-software.jpg" alt="محیط حرفه‌ای توسعه نرم‌افزار با نمایش کد روی چند نمایشگر">
+              <div class="article-content">
+                <div class="article-meta-row"><span class="article-tag">مهندسی نرم‌افزار</span><span class="article-source">NIST · SEI</span></div>
+                <h3>چرا کدی که اجرا می‌شود، هنوز می‌تواند نرم‌افزار بدی باشد؟</h3>
+                <p>پشت صحنه نرم‌افزارهای قابل‌اعتماد؛ از معماری و آزمون تا امنیت، نگهداشت‌پذیری و تصمیم‌هایی که کیفیت واقعی را می‌سازند.</p>
+                <footer><span>12 دقیقه مطالعه</span><button type="button">مطالعه علمی</button></footer>
+              </div>
+            </article>
+            <article class="article-card" data-article="ai">
+              <img src="article-ai.jpg" alt="مغز دیجیتال و نمودارهای یادگیری ماشین در محیط هوش مصنوعی">
+              <div class="article-content">
+                <div class="article-meta-row"><span class="article-tag">هوش مصنوعی</span><span class="article-source">NIST AI RMF</span></div>
+                <h3>هوش مصنوعی چگونه یاد می‌گیرد و چرا گاهی با اطمینان اشتباه می‌کند؟</h3>
+                <p>از داده و تابع خطا تا بیش‌برازش، ارزیابی مدل و پدیده توهم؛ توضیحی علمی و قابل‌فهم از سازوکار مدل‌های امروزی.</p>
+                <footer><span>13 دقیقه مطالعه</span><button type="button">مطالعه علمی</button></footer>
+              </div>
+            </article>
+            <article class="article-card" data-article="security">
+              <img src="article-security.jpg" alt="سپر و قفل دیجیتال در معماری امنیت سایبری">
+              <div class="article-content">
+                <div class="article-meta-row"><span class="article-tag">امنیت سایبری</span><span class="article-source">NIST · OWASP</span></div>
+                <h3>فایروال کافی نیست؛ Zero Trust چگونه امنیت مدرن را تغییر داد؟</h3>
+                <p>چرا اعتماد ضمنی خطرناک است و هویت، کمترین سطح دسترسی، اعتبارسنجی پیوسته و امنیت برنامه چه نقشی در دفاع چندلایه دارند.</p>
+                <footer><span>11 دقیقه مطالعه</span><button type="button">مطالعه علمی</button></footer>
+              </div>
+            </article>
+            <article class="article-card" data-article="engineering">
+              <img src="article-engineering.jpg" alt="تراشه مرکزی، لپ‌تاپ و نمودارهای معماری مهندسی کامپیوتر">
+              <div class="article-content">
+                <div class="article-meta-row"><span class="article-tag">معماری کامپیوتر</span><span class="article-source">ACM · IEEE-CS</span></div>
+                <h3>از ترانزیستور تا هوش مصنوعی؛ مهندسی کامپیوتر دقیقاً چه چیزی می‌سازد؟</h3>
+                <p>سفر یک دستور از مدار منطقی و پردازنده تا سیستم‌عامل و نرم‌افزار؛ تصویری روشن از پیوند سخت‌افزار و نرم‌افزار.</p>
+                <footer><span>14 دقیقه مطالعه</span><button type="button">مطالعه علمی</button></footer>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="consult-panel reveal" id="consultation">
+          <div class="panel-heading unified-panel-heading consult-heading">
+            <div class="panel-title">
+              <span class="panel-icon" aria-hidden="true"><svg><use href="#i-calendar"></use></svg></span>
+              <div><span>راهنمایی تخصصی</span><h2>رزرو نوبت مشاوره</h2></div>
+            </div>
+          </div>
+          <p class="panel-description">برای انتخاب حوزه مناسب، برنامه‌ریزی یادگیری یا بررسی مسیر دانشگاهی، اطلاعات زیر را تکمیل کنید.</p>
+          <form id="consult-form" novalidate>
+            <div class="form-pair identity-pair">
+              <label><span>نام و نام خانوادگی</span><div class="input-wrap"><svg><use href="#i-user"></use></svg><input name="fullName" type="text" autocomplete="name" placeholder="نام خود را وارد کنید" required></div></label>
+              <label><span>شماره تماس</span><div class="input-wrap"><svg><use href="#i-call"></use></svg><input name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="مثال: 09123456789" maxlength="11" required></div></label>
+            </div>
+            <div class="form-pair interest-status-pair">
+              <label><span>حوزه مورد علاقه</span><div class="input-wrap"><svg><use href="#i-layers"></use></svg><select name="topic" required><option value="">انتخاب کنید</option><option>توسعه وب</option><option>برنامه‌نویسی موبایل</option><option>هوش مصنوعی</option><option>علم داده</option><option>امنیت سایبری</option><option>شبکه و زیرساخت</option><option>مهندسی نرم‌افزار</option><option>سخت‌افزار و IoT</option><option>بازی‌سازی</option><option>رایانش ابری و DevOps</option><option>طراحی UI/UX</option><option>انتخاب مسیر کلی</option></select></div></label>
+              <label><span>وضعیت فعلی</span><div class="input-wrap"><svg><use href="#i-briefcase"></use></svg><select name="currentStatus" required><option value="">انتخاب کنید</option><option>دانش‌آموز</option><option>دانشجو</option><option>فارغ‌التحصیل</option><option>شاغل در حوزه فناوری</option><option>شاغل در حوزه‌ای دیگر</option><option>در حال تغییر مسیر شغلی</option><option>شروع از صفر</option></select></div></label>
+            </div>
+            <div class="form-pair">
+              <label><span>انتخاب تاریخ</span><div class="input-wrap"><svg><use href="#i-calendar"></use></svg><select name="date" id="jalali-date" required><option value="">در حال بارگذاری...</option></select></div></label>
+              <label><span>ساعت</span><div class="input-wrap"><svg><use href="#i-clock"></use></svg><select name="time" id="consult-time" required><option value="">انتخاب کنید</option></select></div></label>
+            </div>
+            <label class="description-field"><span>توضیح کوتاه (اختیاری)</span><div class="input-wrap textarea-wrap"><svg><use href="#i-doc"></use></svg><textarea name="description" rows="3" maxlength="280" placeholder="هدف یا موضوع اصلی مشاوره را کوتاه بنویسید"></textarea></div></label>
+            <button class="btn primary submit-btn" type="submit">ثبت درخواست مشاوره <svg><use href="#i-send"></use></svg></button>
+            <p class="consult-meta">ثبت آزمایشی مشاوره در مرورگر</p>
+            <div class="form-message" role="status" aria-live="polite"></div>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <a class="brand footer-brand" href="#top"><span class="brand-symbol" aria-hidden="true"><svg><use href="#i-bit-logo"></use></svg></span><span class="brand-name">Novabit</span></a>
+        <p>Novabit؛ جایی که مسیر حرفه‌ای تو در مهندسی کامپیوتر، از شناخت تا تخصص، آغاز می‌شود.</p>
+      </div>
+      <div>
+        <h3>دسترسی سریع</h3>
+        <a href="#courses">دروس دانشگاهی</a>
+        <a href="#fields">مسیرهای تخصصی</a>
+        <a href="#roadmap">از کجا شروع کنم؟</a>
+        <a href="#skills">مهارت‌های کلیدی</a>
+        <a href="#articles">مقالات</a>
+        <a href="#consultation">نوبت مشاوره</a>
+      </div>
+      <div>
+        <h3>ارتباط با ما</h3>
+        <p><svg><use href="#i-clock"></use></svg> شنبه تا چهارشنبه، 9:00 تا 20:00</p>
+        <p><svg><use href="#i-call"></use></svg> 0912 345 6789</p>
+        <p><svg><use href="#i-mail"></use></svg> info@novabit.ir</p>
+        <p><svg><use href="#i-location"></use></svg> تهران، ایران</p>
+      </div>
+    </div>
+    <div class="container copyright">تمام حقوق این وب‌سایت متعلق به Novabit می‌باشد. فاطمه برهانی 40119841054069 (آزمایشی)</div>
+  </footer>
+
+  <button class="back-top" type="button" aria-label="بازگشت به بالای صفحه"><svg><use href="#i-arrow"></use></svg></button>
+
+  <div class="article-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-card">
+      <button class="modal-close" type="button" aria-label="بستن مقاله" data-close-modal><svg><use href="#i-close"></use></svg></button>
+      <span class="modal-tag"></span>
+      <h2 id="modal-title"></h2>
+      <div class="modal-body"></div>
+    </article>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
